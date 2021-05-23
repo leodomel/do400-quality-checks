@@ -17,6 +17,9 @@
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <quarkus.platform.version>1.12.1.Final</quarkus.platform.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
+    <sonar.projectKey>leodomel_do400-quality-checks</sonar.projectKey>
+    <sonar.organization>leodomel</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -81,7 +84,7 @@
         <version>3.13.0</version>
         <configuration>
           <rulesets>
-            <ruleset>${pom.basedir}/pmd-rulesets.xml</ruleset>
+            <ruleset>${project.basedir}/pmd-rulesets.xml</ruleset>
           </rulesets> 
           <minimumTokens>10</minimumTokens>
           <printFailingErrors>true</printFailingErrors>

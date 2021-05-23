@@ -1,11 +1,10 @@
 package com.redhat.simple.calculator;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 public final class BasicCalculator extends Calculator {
+    private final SecureRandom rand = new SecureRandom();
     public int random() {
-        Random r = new Random();
-
-        return r.nextInt();
+        return this.rand.nextInt();
     }
 }
